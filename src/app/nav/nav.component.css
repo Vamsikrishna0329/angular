@@ -1,0 +1,21 @@
+nav{
+    background-color: #20819a;
+    padding: 0.5rem;
+    min-width: 200px;
+
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    margin-bottom: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
