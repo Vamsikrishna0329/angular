@@ -1,0 +1,5 @@
+<p style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">color changer !</p>
+<div class="color-changer-container" [style.background-color]="color">
+<label for="colorInput">Enter a Color: </label>
+<input id="colorInput" type="text" [(ngModel)]="colorValue" (input)="updateColor()">
+</div>
