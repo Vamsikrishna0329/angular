@@ -1,0 +1,18 @@
+<div>
+  original: {{originalText}}
+  <br>
+  reversed: {{originalText | reverse}}
+</div>
+<hr>
+<div>
+  Fahrenheit: {{ fahrenheitValue }}°F
+  <br>
+  Celsius: {{ fahrenheitValue | temperatureConversion: 'C' }}°C
+  <br>
+  <br>
+  Celsius: {{ celsiusValue }}°C
+  <br>
+  Fahrenheit: {{ celsiusValue | temperatureConversion: 'F' }}°F
+</div>
+<hr>
+<app-countries></app-countries>

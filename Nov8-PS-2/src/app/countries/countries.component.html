@@ -1,0 +1,14 @@
+
+  
+
+  <!-- countries.component.html -->
+<div>
+    <input type="text" [(ngModel)]="newCountry" />
+    <button (click)="addCountry()">Add Country</button>
+    <button (click)="toggleSortOrder()">Sort Order</button>
+  </div>
+  
+  <ul>
+    <li *ngFor="let country of countries | sortCountries:sortOrder">{{ country.name }}</li>
+  </ul>
+  
