@@ -1,0 +1,11 @@
+<p>main works!</p>
+<div>
+    <button (click)="start()">Start</button>
+    <button (click)="stop()">Stop</button>
+    <app-even (evenNumber)="receiveEvenNumber($event)"></app-even>
+    <app-odd (oddNumber)="receiveOddNumber($event)"></app-odd>
+    <div *ngIf="shouldDisplayOutput">
+    <div>Odd Numbers : {{oddNumbers.join(', ')}}</div>
+    <div>Even Numbers : {{evenNumbers.join(', ')}}</div>
+    </div>
+</div>
