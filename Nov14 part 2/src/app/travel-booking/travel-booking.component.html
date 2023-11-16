@@ -1,0 +1,27 @@
+<p>travel-booking works!</p>
+<form [formGroup]="travelForm" (ngSubmit)="onSubmit()">
+    <label>
+      One Way:
+      <input type="checkbox" formControlName="oneWay">
+    </label>
+  
+    <label>
+      Departure Date:
+      <input type="date" formControlName="departureDate">
+    </label>
+  
+    <label *ngIf="!travelForm.get('oneWay')?.value">
+      Return Date:
+      <input type="date" formControlName="returnDate">
+    </label>
+  
+    <div *ngIf="travelForm.hasError('returnDateRequired', 'travelForm')">
+      Return Date is required for round trips.
+    </div>
+  
+    <div *ngIf="travelForm.hasError('invalidReturnDate', 'travelForm')">
+      Return Date must be after Departure Date.
+    </div>
+  
+    <button type="submit">Submit</button>
+  </form>

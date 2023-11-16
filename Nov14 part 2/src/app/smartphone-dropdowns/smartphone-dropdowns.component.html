@@ -1,0 +1,21 @@
+<form [formGroup]="smartphoneForm">
+    <label for="smartphone">Smartphone:</label>
+    <select id="smartphone" formControlName="smartphone">
+      <option *ngFor="let phone of smartphones" [value]="phone.name">{{ phone.name }}</option>
+    </select>
+  
+    <label for="model">Model:</label>
+    <select id="model" formControlName="model">
+      <option *ngFor="let model of models" [value]="model">{{ model }}</option>
+    </select>
+  
+    <label for="color">Color:</label>
+    <select id="color" formControlName="color">
+      <option *ngFor="let color of colors" [value]="color">{{ color }}</option>
+    </select>
+  </form>
+  
+  <div *ngIf="selectedPrice !== null">
+    <p [style.color]="selectedColor">{{ 'Selected Color: ' + selectedColor }}</p>
+    <p [style.color]="'blue'">{{ 'Selected Price: ' + (selectedPrice | currency:'USD':'symbol') }}</p>
+  </div>
