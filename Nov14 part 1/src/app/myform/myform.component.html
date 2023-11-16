@@ -1,0 +1,10 @@
+<p>myform works!</p>
+<form [formGroup]="myForm" (ngSubmit)="submitForm()">
+    <label for="dob">Date of Birth:</label>
+    <input type="date" formControlName="dob" />
+  
+    <label for="doj">Date of Joining:</label>
+    <input type="date" formControlName="doj" />
+    
+    <button type="submit" [disabled]="myForm.invalid">Submit</button>
+  </form>
